@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190AAC562209368F00A4784D /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 190AAC552209368F00A4784D /* SearchCell.xib */; };
 		197A87AD2207A23300938781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197A87AC2207A23300938781 /* AppDelegate.swift */; };
 		197A87AF2207A23300938781 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197A87AE2207A23300938781 /* BaseTableViewController.swift */; };
 		197A87B22207A23300938781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197A87B02207A23300938781 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		197A87C22207A23400938781 /* playertrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197A87C12207A23400938781 /* playertrackerTests.swift */; };
 		19D8733F220922400090E80E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D8733E220922400090E80E /* MainTableViewController.swift */; };
 		19D873412209233F0090E80E /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D873402209233F0090E80E /* ResultsTableViewController.swift */; };
-		19D8734522092D540090E80E /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19D8734422092D540090E80E /* SearchCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		190AAC552209368F00A4784D /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchCell.xib; path = playertracker/Views/Search/SearchCell.xib; sourceTree = SOURCE_ROOT; };
 		197A87A92207A23300938781 /* playertracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = playertracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		197A87AC2207A23300938781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		197A87AE2207A23300938781 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		197A87C32207A23400938781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19D8733E220922400090E80E /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		19D873402209233F0090E80E /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
-		19D8734422092D540090E80E /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +62,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		190AAC542209364400A4784D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				190AAC552209368F00A4784D /* SearchCell.xib */,
+			);
+			name = Search;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		197A87A02207A23300938781 = {
 			isa = PBXGroup;
 			children = (
@@ -112,9 +121,9 @@
 		19D873372208C98C0090E80E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				190AAC542209364400A4784D /* Search */,
 				197A87B52207A23400938781 /* LaunchScreen.storyboard */,
 				197A87B02207A23300938781 /* Main.storyboard */,
-				19D87346220932460090E80E /* Search */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,15 +144,6 @@
 				19D873402209233F0090E80E /* ResultsTableViewController.swift */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		19D87346220932460090E80E /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				19D8734422092D540090E80E /* SearchCell.xib */,
-			);
-			name = Search;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				197A87B72207A23400938781 /* LaunchScreen.storyboard in Resources */,
-				19D8734522092D540090E80E /* SearchCell.xib in Resources */,
+				190AAC562209368F00A4784D /* SearchCell.xib in Resources */,
 				197A87B42207A23400938781 /* Assets.xcassets in Resources */,
 				197A87B22207A23300938781 /* Main.storyboard in Resources */,
 			);
