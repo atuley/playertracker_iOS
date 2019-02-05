@@ -14,9 +14,5 @@ class BaseTableViewController: UITableViewController {
         // Required if our subclasses are to use `dequeueReusableCellWithIdentifier(_:forIndexPath:)`.
         tableView.register(nib, forCellReuseIdentifier: BaseTableViewController.tableViewCellIdentifier)
     }
-    
-    func configureCell(_ cell: UITableViewCell, forProduct product: String) {
-        cell.textLabel?.text = product
-    }
 }
 

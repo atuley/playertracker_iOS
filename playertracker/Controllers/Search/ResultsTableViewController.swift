@@ -8,11 +8,13 @@ class ResultsTableViewController: BaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: BaseTableViewController.tableViewCellIdentifier, for: indexPath)
-
         let product = filteredProducts[indexPath.row]
-        configureCell(cell, forProduct: product)
-
-        return cell
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: BaseTableViewController.tableViewCellIdentifier, for: indexPath) as? SearchCell   {
+            cell.configure(player: product)
+            return cell
+        } else {
+            return UITableViewCell()
+        }
     }
 }
