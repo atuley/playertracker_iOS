@@ -14,18 +14,23 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" id="0DL-HR-8ur" customClass="SearchCell" customModule="playertracker" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0DL-HR-8ur" id="Gkl-Gm-Rr8" customClass="SearchCell" customModule="playertracker" customModuleProvider="target">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0DL-HR-8ur" id="Gkl-Gm-Rr8">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-uR-AaU">
-                        <rect key="frame" x="12" y="11" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-uR-AaU">
+                        <rect key="frame" x="46" y="7" width="142" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="3pO-uR-AaU" firstAttribute="leading" secondItem="Gkl-Gm-Rr8" secondAttribute="leading" constant="46" id="723-nx-pdZ"/>
+                    <constraint firstItem="3pO-uR-AaU" firstAttribute="top" secondItem="Gkl-Gm-Rr8" secondAttribute="top" constant="7" id="ONE-wb-Qni"/>
+                    <constraint firstAttribute="trailing" secondItem="3pO-uR-AaU" secondAttribute="trailing" constant="187" id="ZJh-Wg-hnU"/>
+                    <constraint firstAttribute="bottom" secondItem="3pO-uR-AaU" secondAttribute="bottom" constant="6.5" id="pqG-Nf-20F"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="name" destination="3pO-uR-AaU" id="BZQ-XU-KAE"/>
