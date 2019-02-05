@@ -18,6 +18,7 @@
 		19D8733F220922400090E80E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D8733E220922400090E80E /* MainTableViewController.swift */; };
 		19D873412209233F0090E80E /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D873402209233F0090E80E /* ResultsTableViewController.swift */; };
 		19FC1731220A165C00764AAA /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC1730220A165C00764AAA /* SearchCell.swift */; };
+		19FC1734220A3DB800764AAA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC1733220A3DB800764AAA /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		19D8733E220922400090E80E /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		19D873402209233F0090E80E /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		19FC1730220A165C00764AAA /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		19FC1733220A3DB800764AAA /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				190AAC5A22093F7700A4784D /* Constants.swift */,
+				19FC1733220A3DB800764AAA /* Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				19D8733F220922400090E80E /* MainTableViewController.swift in Sources */,
 				19FC1731220A165C00764AAA /* SearchCell.swift in Sources */,
+				19FC1734220A3DB800764AAA /* Utilities.swift in Sources */,
 				197A87AF2207A23300938781 /* BaseTableViewController.swift in Sources */,
 				197A87AD2207A23300938781 /* AppDelegate.swift in Sources */,
 				19D873412209233F0090E80E /* ResultsTableViewController.swift in Sources */,
