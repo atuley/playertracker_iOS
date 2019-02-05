@@ -153,8 +153,8 @@
 		19FC1732220A188100764AAA /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				190AAC552209368F00A4784D /* SearchCell.xib */,
 				19FC1730220A165C00764AAA /* SearchCell.swift */,
+				190AAC552209368F00A4784D /* SearchCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";

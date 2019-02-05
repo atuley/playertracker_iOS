@@ -3,16 +3,14 @@ import UIKit
 class BaseTableViewController: UITableViewController {
     var filteredProducts: [String] = []
     
-    static let tableViewCellIdentifier = "searchCell"
-    private static let nibName = "SearchCell"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let nib = UINib(nibName: BaseTableViewController.nibName, bundle: nil)
-        
-        // Required if our subclasses are to use `dequeueReusableCellWithIdentifier(_:forIndexPath:)`.
-        tableView.register(nib, forCellReuseIdentifier: BaseTableViewController.tableViewCellIdentifier)
+        initializeCells()
+    }
+    
+    private func initializeCells() {
+        let nib = UINib(nibName: NibNames.searchCell, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: CellIdentifiers.searchCell)
     }
 }
 
