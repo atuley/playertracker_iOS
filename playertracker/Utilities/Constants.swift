@@ -11,3 +11,7 @@ struct NibNames {
 struct NavbarTitles {
     static let search = "Search"
 }
+
+struct XibHeights {
+    static let search = 100
+}

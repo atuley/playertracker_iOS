@@ -95,7 +95,7 @@ extension MainTableViewController: UISearchResultsUpdating {
         }
         
         if let resultsController = searchController.searchResultsController as? ResultsTableViewController {
-            resultsController.filteredProducts = filteredResults
+            resultsController.filteredProducts = filteredResults.count == 0 ? ["alex"] : filteredResults
             resultsController.tableView.reloadData()
         }
     }

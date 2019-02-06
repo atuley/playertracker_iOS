@@ -11,31 +11,55 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" id="0DL-HR-8ur" customClass="SearchCell" customModule="playertracker" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="156" id="0DL-HR-8ur" customClass="SearchCell" customModule="playertracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0DL-HR-8ur" id="Gkl-Gm-Rr8">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-uR-AaU">
-                        <rect key="frame" x="46" y="7" width="142" height="30"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#30 // PG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqb-C8-lJ0">
+                        <rect key="frame" x="143" y="36" width="74" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="mIJ-Tm-diE">
+                        <rect key="frame" x="14" y="12" width="110" height="88"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="110" id="AIz-ha-0oz"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEPHEN CURRY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-uR-AaU">
+                        <rect key="frame" x="143" y="11" width="136" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="CWV-Uv-LTA"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="3pO-uR-AaU" firstAttribute="leading" secondItem="Gkl-Gm-Rr8" secondAttribute="leading" constant="46" id="723-nx-pdZ"/>
-                    <constraint firstItem="3pO-uR-AaU" firstAttribute="top" secondItem="Gkl-Gm-Rr8" secondAttribute="top" constant="7" id="ONE-wb-Qni"/>
-                    <constraint firstAttribute="trailing" secondItem="3pO-uR-AaU" secondAttribute="trailing" constant="187" id="ZJh-Wg-hnU"/>
-                    <constraint firstAttribute="bottom" secondItem="3pO-uR-AaU" secondAttribute="bottom" constant="6.5" id="pqG-Nf-20F"/>
+                    <constraint firstItem="Qqb-C8-lJ0" firstAttribute="top" secondItem="3pO-uR-AaU" secondAttribute="bottom" id="VQu-gp-zZj"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mIJ-Tm-diE" secondAttribute="bottom" constant="-11" id="YcJ-dG-IwQ"/>
+                    <constraint firstItem="mIJ-Tm-diE" firstAttribute="top" secondItem="Gkl-Gm-Rr8" secondAttribute="topMargin" constant="1" id="b9o-Ef-Gri"/>
+                    <constraint firstItem="3pO-uR-AaU" firstAttribute="leading" secondItem="mIJ-Tm-diE" secondAttribute="trailing" constant="19" id="mGy-mF-ENl"/>
+                    <constraint firstItem="Qqb-C8-lJ0" firstAttribute="top" secondItem="3pO-uR-AaU" secondAttribute="bottom" id="muT-gd-B3o"/>
+                    <constraint firstItem="3pO-uR-AaU" firstAttribute="top" secondItem="Gkl-Gm-Rr8" secondAttribute="topMargin" id="n7P-ui-pos"/>
+                    <constraint firstItem="mIJ-Tm-diE" firstAttribute="leading" secondItem="Gkl-Gm-Rr8" secondAttribute="leadingMargin" constant="-2" id="r3d-52-DOT"/>
+                    <constraint firstItem="Qqb-C8-lJ0" firstAttribute="leading" secondItem="mIJ-Tm-diE" secondAttribute="trailing" constant="19" id="zXy-MC-CmV"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.16052056347150256" green="0.16052056347150256" blue="0.16052056347150256" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
+                <outlet property="info" destination="Qqb-C8-lJ0" id="A9R-0l-Eww"/>
                 <outlet property="name" destination="3pO-uR-AaU" id="BZQ-XU-KAE"/>
             </connections>
-            <point key="canvasLocation" x="5.5999999999999996" y="-446.17691154422795"/>
+            <point key="canvasLocation" x="0.80000000000000004" y="-471.36431784107947"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="player" width="260" height="190"/>
+    </resources>
 </document>

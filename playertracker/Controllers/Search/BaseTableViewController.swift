@@ -9,8 +9,9 @@ class BaseTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 86
+        return CGFloat(XibHeights.search)
     }
+    
     private func initializeCells() {
         let nib = UINib(nibName: NibNames.searchCell, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: CellIdentifiers.searchCell)
