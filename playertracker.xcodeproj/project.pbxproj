@@ -17,6 +17,9 @@
 		197A87C22207A23400938781 /* playertrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197A87C12207A23400938781 /* playertrackerTests.swift */; };
 		19D8733F220922400090E80E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D8733E220922400090E80E /* MainTableViewController.swift */; };
 		19D873412209233F0090E80E /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D873402209233F0090E80E /* ResultsTableViewController.swift */; };
+		19E9F3E5220A7D6200989CE7 /* PlayerSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9F3E4220A7D6200989CE7 /* PlayerSearchResult.swift */; };
+		19E9F3E7220A7DC600989CE7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9F3E6220A7DC600989CE7 /* Player.swift */; };
+		19E9F3E9220A7ED300989CE7 /* PlayerImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9F3E8220A7ED300989CE7 /* PlayerImages.swift */; };
 		19FC1731220A165C00764AAA /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC1730220A165C00764AAA /* SearchCell.swift */; };
 		19FC1734220A3DB800764AAA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC1733220A3DB800764AAA /* Utilities.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +49,9 @@
 		197A87C32207A23400938781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19D8733E220922400090E80E /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		19D873402209233F0090E80E /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		19E9F3E4220A7D6200989CE7 /* PlayerSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchResult.swift; sourceTree = "<group>"; };
+		19E9F3E6220A7DC600989CE7 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		19E9F3E8220A7ED300989CE7 /* PlayerImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerImages.swift; sourceTree = "<group>"; };
 		19FC1730220A165C00764AAA /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		19FC1733220A3DB800764AAA /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +127,7 @@
 		19D873362208C97D0090E80E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				19E9F3E3220A7D4500989CE7 /* Search */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,6 +156,16 @@
 				197A87AE2207A23300938781 /* BaseTableViewController.swift */,
 				19D8733E220922400090E80E /* MainTableViewController.swift */,
 				19D873402209233F0090E80E /* ResultsTableViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		19E9F3E3220A7D4500989CE7 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				19E9F3E4220A7D6200989CE7 /* PlayerSearchResult.swift */,
+				19E9F3E6220A7DC600989CE7 /* Player.swift */,
+				19E9F3E8220A7ED300989CE7 /* PlayerImages.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -268,8 +285,11 @@
 				19FC1731220A165C00764AAA /* SearchCell.swift in Sources */,
 				19FC1734220A3DB800764AAA /* Utilities.swift in Sources */,
 				197A87AF2207A23300938781 /* BaseTableViewController.swift in Sources */,
+				19E9F3E9220A7ED300989CE7 /* PlayerImages.swift in Sources */,
 				197A87AD2207A23300938781 /* AppDelegate.swift in Sources */,
+				19E9F3E5220A7D6200989CE7 /* PlayerSearchResult.swift in Sources */,
 				19D873412209233F0090E80E /* ResultsTableViewController.swift in Sources */,
+				19E9F3E7220A7DC600989CE7 /* Player.swift in Sources */,
 				190AAC5B22093F7700A4784D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
