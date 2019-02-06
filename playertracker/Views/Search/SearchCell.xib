@@ -51,10 +51,10 @@
                     <constraint firstItem="Qqb-C8-lJ0" firstAttribute="leading" secondItem="mIJ-Tm-diE" secondAttribute="trailing" constant="19" id="zXy-MC-CmV"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.16052056347150256" green="0.16052056347150256" blue="0.16052056347150256" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="info" destination="Qqb-C8-lJ0" id="A9R-0l-Eww"/>
                 <outlet property="name" destination="3pO-uR-AaU" id="BZQ-XU-KAE"/>
+                <outlet property="playerImage" destination="mIJ-Tm-diE" id="KJO-dd-dcV"/>
             </connections>
             <point key="canvasLocation" x="0.80000000000000004" y="-471.36431784107947"/>
         </tableViewCell>
