@@ -9,6 +9,7 @@ class ResultsTableViewController: BaseTableViewController {
         let product = filteredProducts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.searchCell, for: indexPath) as? SearchCell   {
+            cell.layer.insertSublayer(Utilities.createImageGradient(), at: 0)
             cell.configure(player: product)
             return cell
         } else {
