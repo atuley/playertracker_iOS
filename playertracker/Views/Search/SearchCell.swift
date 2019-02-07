@@ -9,34 +9,31 @@ class SearchCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        let imageView = UIImageView()
-        imageView.frame.size = CGSize(width: 100, height: 100)
-        imageView.image = UIImage(named: "GSW")
-        imageView.alpha = 0.3
-        imageView.contentMode = .scaleAspectFit
-        imageView.clipsToBounds = true
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        self.insertSubview(imageView, at: 0)
-
-        let horizontalConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
-        self.addConstraint(horizontalConstraint)
-
-        let verticalConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0)
-        self.addConstraint(verticalConstraint)
-        
-        let widthConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 500)
-        self.addConstraint(widthConstraint)
-        let heightConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 500)
-        self.addConstraint(heightConstraint)
-        
+        configureTeamLogoBackground()
     }
     
     func configure(player: String) {
         name.text = "STEPHEN CURRY"
         name.backgroundColor = UIColor.yellow
+        name.alpha = 0.9
         info.text = "#30 // PG"
         info.backgroundColor = UIColor.yellow
+        info.alpha = 0.9
         playerImage.image = Utilities.getImageFromUrl(url: url!)
+    }
+    
+    private func configureTeamLogoBackground() {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "GSW") //NOTE: THIS LINE MAY CAUSE THE SAME TEAM LOGO TO ALWAYS BE RENDERED(DOES THIS MUTATE GLOBAL STATE?)
+        imageView.alpha = 0.3
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        self.insertSubview(imageView, at: 0)
+        
+        imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        
+        imageView.widthAnchor.constraint(equalToConstant: 500).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 500).isActive = true
     }
 }

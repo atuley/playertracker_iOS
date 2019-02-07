@@ -18,37 +18,55 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#30 // PG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqb-C8-lJ0">
-                        <rect key="frame" x="143" y="36" width="74" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqb-C8-lJ0">
+                        <rect key="frame" x="121" y="45" width="100" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="AjI-op-rWg"/>
+                            <constraint firstAttribute="height" constant="30" id="USX-Zv-GPm"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="gDX-o5-8h6"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment content="#30 // PG">
+                                <attributes>
+                                    <font key="NSFont" metaFont="system" size="17"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-uR-AaU">
+                        <rect key="frame" x="121" y="20" width="200" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="KMF-Ut-5kE"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="v9v-3O-TsU"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment content="STEPHEN CURRY">
+                                <attributes>
+                                    <font key="NSFont" metaFont="system" size="17"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="mIJ-Tm-diE">
-                        <rect key="frame" x="14" y="12" width="110" height="88"/>
+                        <rect key="frame" x="3" y="13" width="110" height="88"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="110" id="AIz-ha-0oz"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEPHEN CURRY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-uR-AaU">
-                        <rect key="frame" x="143" y="11" width="136" height="25"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="25" id="CWV-Uv-LTA"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Qqb-C8-lJ0" firstAttribute="top" secondItem="3pO-uR-AaU" secondAttribute="bottom" id="VQu-gp-zZj"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="mIJ-Tm-diE" secondAttribute="bottom" constant="-11" id="YcJ-dG-IwQ"/>
-                    <constraint firstItem="mIJ-Tm-diE" firstAttribute="top" secondItem="Gkl-Gm-Rr8" secondAttribute="topMargin" constant="1" id="b9o-Ef-Gri"/>
-                    <constraint firstItem="3pO-uR-AaU" firstAttribute="leading" secondItem="mIJ-Tm-diE" secondAttribute="trailing" constant="19" id="mGy-mF-ENl"/>
-                    <constraint firstItem="Qqb-C8-lJ0" firstAttribute="top" secondItem="3pO-uR-AaU" secondAttribute="bottom" id="muT-gd-B3o"/>
-                    <constraint firstItem="3pO-uR-AaU" firstAttribute="top" secondItem="Gkl-Gm-Rr8" secondAttribute="topMargin" id="n7P-ui-pos"/>
-                    <constraint firstItem="mIJ-Tm-diE" firstAttribute="leading" secondItem="Gkl-Gm-Rr8" secondAttribute="leadingMargin" constant="-2" id="r3d-52-DOT"/>
-                    <constraint firstItem="Qqb-C8-lJ0" firstAttribute="leading" secondItem="mIJ-Tm-diE" secondAttribute="trailing" constant="19" id="zXy-MC-CmV"/>
+                    <constraint firstItem="3pO-uR-AaU" firstAttribute="top" secondItem="Gkl-Gm-Rr8" secondAttribute="top" constant="20" id="OIO-Qr-Bsf"/>
+                    <constraint firstItem="Qqb-C8-lJ0" firstAttribute="top" secondItem="3pO-uR-AaU" secondAttribute="bottom" constant="-5" id="VQu-gp-zZj"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mIJ-Tm-diE" secondAttribute="bottom" constant="-12" id="YcJ-dG-IwQ"/>
+                    <constraint firstItem="mIJ-Tm-diE" firstAttribute="top" secondItem="Gkl-Gm-Rr8" secondAttribute="topMargin" constant="2" id="b9o-Ef-Gri"/>
+                    <constraint firstItem="3pO-uR-AaU" firstAttribute="leading" secondItem="mIJ-Tm-diE" secondAttribute="trailing" constant="8" id="mGy-mF-ENl"/>
+                    <constraint firstItem="Qqb-C8-lJ0" firstAttribute="top" secondItem="3pO-uR-AaU" secondAttribute="bottom" constant="-5" id="muT-gd-B3o"/>
+                    <constraint firstItem="mIJ-Tm-diE" firstAttribute="leading" secondItem="Gkl-Gm-Rr8" secondAttribute="leadingMargin" constant="-13" id="r3d-52-DOT"/>
+                    <constraint firstItem="Qqb-C8-lJ0" firstAttribute="leading" secondItem="mIJ-Tm-diE" secondAttribute="trailing" constant="8" id="zXy-MC-CmV"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
