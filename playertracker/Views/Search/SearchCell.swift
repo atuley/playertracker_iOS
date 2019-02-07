@@ -4,22 +4,20 @@ class SearchCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var info: UILabel!
     @IBOutlet weak var playerImage: UIImageView!
-    
-    let url = URL(string: "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612744/2018/260x190/201939.png")
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         configureTeamLogoBackground()
     }
     
-    func configure(player: String) {
-        name.text = "STEPHEN CURRY"
+    func configure(player: Player) {
+        name.text = "\(player.firstName!) \(player.lastName!)"
         name.backgroundColor = UIColor.yellow
         name.alpha = 0.9
-        info.text = "#30 // PG"
+        info.text = "#\(player.number!) // \(player.position!)"
         info.backgroundColor = UIColor.yellow
         info.alpha = 0.9
-        playerImage.image = Utilities.getImageFromUrl(url: url!)
+        playerImage.image = Utilities.getImageFromUrl(url: player.images.player!)
     }
     
     private func configureTeamLogoBackground() {

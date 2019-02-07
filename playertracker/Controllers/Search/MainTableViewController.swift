@@ -5,6 +5,7 @@ class MainTableViewController: BaseTableViewController {
     private var resultsTableViewController: ResultsTableViewController!
     
     var products: [String] = ["alex", "nick", "randy", "mike", "kody"]
+    var players: [Player] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -12,6 +13,17 @@ class MainTableViewController: BaseTableViewController {
         navigationItem.title = NavbarTitles.search
         configureResultsController()
         configureSearchController()
+        
+        PlayerSearchService().getPlayerSearchResults() {
+            (playerSearchResult, error) in
+            if error != nil {
+                print("Error searching : \(String(describing: error))")
+                return
+            } else if let playerSearchResult = playerSearchResult {
+                self.players = playerSearchResult.players
+                self.tableView.reloadData()
+            }
+        }
     }
     
     private func configureResultsController() {
@@ -40,16 +52,16 @@ class MainTableViewController: BaseTableViewController {
 
 extension MainTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products.count
+        return players.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let product = products[indexPath.row]
+        let player = players[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.searchCell, for: indexPath) as? SearchCell   {
             cell.layer.insertSublayer(Utilities.createImageGradient(), at: 0)
-            cell.configure(player: product)
+            cell.configure(player: player)
             return cell
         } else {
             return UITableViewCell()

@@ -10,7 +10,7 @@ class ResultsTableViewController: BaseTableViewController {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.searchCell, for: indexPath) as? SearchCell   {
             cell.layer.insertSublayer(Utilities.createImageGradient(), at: 0)
-            cell.configure(player: product)
+//            cell.configure(player: Player())
             return cell
         } else {
             return UITableViewCell()
