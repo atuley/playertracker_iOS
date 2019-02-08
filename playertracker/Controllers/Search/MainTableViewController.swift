@@ -4,7 +4,6 @@ class MainTableViewController: BaseTableViewController {
     private var searchController: UISearchController!
     private var resultsTableViewController: ResultsTableViewController!
     
-    var products: [String] = ["alex", "nick", "randy", "mike", "kody"]
     var players: [Player] = []
     
     override func viewDidLoad() {
@@ -14,16 +13,7 @@ class MainTableViewController: BaseTableViewController {
         configureResultsController()
         configureSearchController()
         
-        PlayerSearchService().getPlayerSearchResults() {
-            (playerSearchResult, error) in
-            if error != nil {
-                print("Error searching : \(String(describing: error))")
-                return
-            } else if let playerSearchResult = playerSearchResult {
-                self.players = playerSearchResult.players
-                self.tableView.reloadData()
-            }
-        }
+        fetchPlayers()
     }
     
     private func configureResultsController() {
@@ -43,10 +33,23 @@ class MainTableViewController: BaseTableViewController {
             tableView.tableHeaderView = searchController.searchBar
         }
         
-        searchController.delegate = self
+        searchController.delegate = self as? UISearchControllerDelegate
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
         definesPresentationContext = true
+    }
+    
+    private func fetchPlayers() {
+        PlayerSearchService().getPlayerSearchResults() {
+            (playerSearchResult, error) in
+            if error != nil {
+                print("Error searching : \(String(describing: error))")
+                return
+            } else if let playerSearchResult = playerSearchResult {
+                self.players = playerSearchResult.players
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 
@@ -76,39 +79,16 @@ extension MainTableViewController: UISearchBarDelegate {
     }
 }
 
-extension MainTableViewController: UISearchControllerDelegate {
-    func presentSearchController(_ searchController: UISearchController) {
-        debugPrint("UISearchControllerDelegate invoked method: \(#function).")
-    }
-    
-    func willPresentSearchController(_ searchController: UISearchController) {
-        debugPrint("UISearchControllerDelegate invoked method: \(#function).")
-    }
-    
-    func didPresentSearchController(_ searchController: UISearchController) {
-        debugPrint("UISearchControllerDelegate invoked method: \(#function).")
-    }
-    
-    func willDismissSearchController(_ searchController: UISearchController) {
-        debugPrint("UISearchControllerDelegate invoked method: \(#function).")
-    }
-    
-    func didDismissSearchController(_ searchController: UISearchController) {
-        debugPrint("UISearchControllerDelegate invoked method: \(#function).")
-    }
-}
-
 extension MainTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        var filteredResults = products
+        var filteredResults = players
         
         filteredResults = filteredResults.filter{
-            return $0 == searchController.searchBar.text!
-            
+            return $0.firstName == searchController.searchBar.text!
         }
         
         if let resultsController = searchController.searchResultsController as? ResultsTableViewController {
-            resultsController.filteredProducts = filteredResults.count == 0 ? ["alex"] : filteredResults
+            resultsController.filteredPlayers = filteredResults
             resultsController.tableView.reloadData()
         }
     }

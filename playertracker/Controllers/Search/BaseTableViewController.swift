@@ -1,7 +1,7 @@
 import UIKit
 
 class BaseTableViewController: UITableViewController {
-    var filteredProducts: [String] = []
+    var filteredPlayers: [Player] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
