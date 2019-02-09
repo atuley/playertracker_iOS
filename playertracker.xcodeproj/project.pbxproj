@@ -16,6 +16,7 @@
 		197A87B72207A23400938781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197A87B52207A23400938781 /* LaunchScreen.storyboard */; };
 		197A87C22207A23400938781 /* playertrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197A87C12207A23400938781 /* playertrackerTests.swift */; };
 		1994EE09220CD83A0067F77A /* PlayerSearchResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994EE08220CD83A0067F77A /* PlayerSearchResultService.swift */; };
+		199868B3220E95E4008DECA9 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 199868B2220E95BB008DECA9 /* RobotoCondensed-Regular.ttf */; };
 		19D8733F220922400090E80E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D8733E220922400090E80E /* MainTableViewController.swift */; };
 		19D873412209233F0090E80E /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D873402209233F0090E80E /* ResultsTableViewController.swift */; };
 		19E9F3E5220A7D6200989CE7 /* PlayerSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9F3E4220A7D6200989CE7 /* PlayerSearchResult.swift */; };
@@ -49,6 +50,7 @@
 		197A87C12207A23400938781 /* playertrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playertrackerTests.swift; sourceTree = "<group>"; };
 		197A87C32207A23400938781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1994EE08220CD83A0067F77A /* PlayerSearchResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchResultService.swift; sourceTree = "<group>"; };
+		199868B2220E95BB008DECA9 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "../../../../Downloads/Roboto_Condensed 2/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		19D8733E220922400090E80E /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		19D873402209233F0090E80E /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		19E9F3E4220A7D6200989CE7 /* PlayerSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchResult.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				1994EE06220CD7E00067F77A /* Services */,
 				190AAC5922093F5100A4784D /* Utilities */,
 				197A87AC2207A23300938781 /* AppDelegate.swift */,
+				199868B1220E9588008DECA9 /* fonts */,
 				197A87B32207A23400938781 /* Assets.xcassets */,
 				197A87B82207A23400938781 /* Info.plist */,
 			);
@@ -141,6 +144,14 @@
 				1994EE08220CD83A0067F77A /* PlayerSearchResultService.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		199868B1220E9588008DECA9 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				199868B2220E95BB008DECA9 /* RobotoCondensed-Regular.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		19D873362208C97D0090E80E /* Models */ = {
@@ -282,6 +293,7 @@
 				197A87B72207A23400938781 /* LaunchScreen.storyboard in Resources */,
 				190AAC562209368F00A4784D /* SearchCell.xib in Resources */,
 				197A87B42207A23400938781 /* Assets.xcassets in Resources */,
+				199868B3220E95E4008DECA9 /* RobotoCondensed-Regular.ttf in Resources */,
 				197A87B22207A23300938781 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

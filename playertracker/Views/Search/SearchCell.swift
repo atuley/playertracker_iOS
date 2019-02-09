@@ -4,35 +4,26 @@ class SearchCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var info: UILabel!
     @IBOutlet weak var playerImage: UIImageView!
-        
+    @IBOutlet weak var smallTeamLogo: UIImageView!
+    @IBOutlet weak var largeTeamLogo: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
     func configure(player: Player) {
-        name.text = "\(player.firstName!) \(player.lastName!)"
-        name.backgroundColor = UIColor.yellow
-        name.alpha = 0.9
-        info.text = "#\(player.number!) // \(player.position!)"
-        info.backgroundColor = UIColor.yellow
-        info.alpha = 0.9
+        name.text = "\(player.firstName!.uppercased()) \(player.lastName!.uppercased())"
+        name.textColor = UIColor.white
+        info.text = "#\(player.number!) | \(player.position!)"
+        info.textColor = Utilities.convertHexToColor(hex: "#CECECE")
         playerImage.image = Utilities.getImageFromUrl(url: player.images.player!)
-        configureTeamLogoBackground(player: player)
-    }
-    
-    private func configureTeamLogoBackground(player: Player) {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: player.tricode!)
-        imageView.alpha = 0.3
-        imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        self.insertSubview(imageView, at: 1)
         
-        imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        playerImage.layer.masksToBounds = false
+        playerImage.layer.cornerRadius = playerImage.frame.height / 2 + 8
+        playerImage.clipsToBounds = true
         
-        imageView.widthAnchor.constraint(equalToConstant: 250).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        smallTeamLogo.image = UIImage(named: player.tricode!)
+        largeTeamLogo.image = UIImage(named: player.tricode!)
     }
 }

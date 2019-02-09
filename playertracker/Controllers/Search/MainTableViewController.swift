@@ -30,11 +30,7 @@ class MainTableViewController: BaseTableViewController {
             if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
                 textfield.textColor = UIColor.blue
                 if let backgroundview = textfield.subviews.first {
-                    
-                    // Background color
                     backgroundview.backgroundColor = UIColor.white.withAlphaComponent(0.95)
-                    
-                    // Rounded corner
                     backgroundview.layer.cornerRadius = 10;
                     backgroundview.clipsToBounds = true;
                 }
