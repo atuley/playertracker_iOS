@@ -8,5 +8,6 @@ struct Player: Decodable {
     var position: String?
     var teamId: String?
     var teamColor: String?
+    var tricode: String?
     var images: PlayerImages
 }

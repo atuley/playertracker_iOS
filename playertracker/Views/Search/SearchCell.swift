@@ -7,7 +7,7 @@ class SearchCell: UITableViewCell {
         
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureTeamLogoBackground()
+        
     }
     
     func configure(player: Player) {
@@ -18,20 +18,21 @@ class SearchCell: UITableViewCell {
         info.backgroundColor = UIColor.yellow
         info.alpha = 0.9
         playerImage.image = Utilities.getImageFromUrl(url: player.images.player!)
+        configureTeamLogoBackground(player: player)
     }
     
-    private func configureTeamLogoBackground() {
+    private func configureTeamLogoBackground(player: Player) {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "GSW") //NOTE: THIS LINE MAY CAUSE THE SAME TEAM LOGO TO ALWAYS BE RENDERED(DOES THIS MUTATE GLOBAL STATE?)
+        imageView.image = UIImage(named: player.tricode!)
         imageView.alpha = 0.3
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        self.insertSubview(imageView, at: 0)
+        self.insertSubview(imageView, at: 1)
         
         imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
-        imageView.widthAnchor.constraint(equalToConstant: 500).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 500).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 250).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 250).isActive = true
     }
 }

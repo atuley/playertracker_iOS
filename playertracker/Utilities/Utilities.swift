@@ -13,7 +13,7 @@ class Utilities {
         return String(describing: url).range(of:"http:") != nil ? URL(string: String(describing: url).replacingOccurrences(of: "http:", with: "https:"))! : url
     }
     
-    static func createImageGradient() -> CAGradientLayer {
+    static func createImageGradient(player: Player) -> CAGradientLayer {
         let screenWidth  = UIScreen.main.fixedCoordinateSpace.bounds.width
         
         let gradient = CAGradientLayer()
@@ -21,19 +21,25 @@ class Utilities {
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradient.endPoint = CGPoint(x: 5.0, y: 0.5)
         
-        let startColor = uicolorFromHex(rgbValue: 0x2D2D2D)
-        let endColor = UIColor.yellow
+        let startColor = convertHexToColor(hex: "#2D2D2D")
+        let endColor = convertHexToColor(hex: player.teamColor!)
         
         gradient.colors = [startColor.cgColor, endColor.cgColor]
         
         return gradient
     }
     
-    static func uicolorFromHex(rgbValue:UInt32)->UIColor{
-        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
-        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
-        let blue = CGFloat(rgbValue & 0xFF)/256.0
-        return UIColor(red:red, green:green, blue:blue, alpha:1.0)
+    static func convertHexToColor(hex: String) -> UIColor {
+        let hex = hex.replacingOccurrences(of: "#", with: "")
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: hex).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
-    
 }
