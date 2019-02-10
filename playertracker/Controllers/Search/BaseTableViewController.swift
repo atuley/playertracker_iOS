@@ -5,8 +5,12 @@ class BaseTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
         initializeCells()
-        tableView.backgroundColor = Utilities.convertHexToColor(hex: "#2D2D2D")
+    }
+    
+    private func configureTableView() {
+        tableView.backgroundColor = Colors.primaryGrey
         tableView.rowHeight = CGFloat(XibHeights.search)
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }

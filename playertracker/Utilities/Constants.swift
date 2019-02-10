@@ -15,3 +15,7 @@ struct NavbarTitles {
 struct XibHeights {
     static let search = 100
 }
+
+struct Colors {
+    static let primaryGrey = Utilities.convertHexToColor(hex: "#2D2D2D")
+}

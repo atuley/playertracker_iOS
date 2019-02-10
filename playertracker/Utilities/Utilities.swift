@@ -21,7 +21,7 @@ class Utilities {
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradient.endPoint = CGPoint(x: 5.0, y: 0.5)
         
-        let startColor = convertHexToColor(hex: "#2D2D2D")
+        let startColor = Colors.primaryGrey
         let endColor = convertHexToColor(hex: player.teamColor!)
         
         gradient.colors = [startColor.cgColor, endColor.cgColor]
