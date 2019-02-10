@@ -92,7 +92,7 @@ extension MainTableViewController: UISearchResultsUpdating {
         var filteredResults = players
         
         filteredResults = filteredResults.filter{
-            return $0.firstName == searchController.searchBar.text!
+            return ("\(String(describing: $0.firstName?.lowercased())) \(String(describing: $0.lastName?.lowercased()))".contains(searchController.searchBar.text!.lowercased()))
         }
         
         if let resultsController = searchController.searchResultsController as? ResultsTableViewController {
