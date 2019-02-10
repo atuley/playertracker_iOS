@@ -6,10 +6,9 @@ class BaseTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeCells()
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(XibHeights.search)
+        tableView.backgroundColor = Utilities.convertHexToColor(hex: "#2D2D2D")
+        tableView.rowHeight = CGFloat(XibHeights.search)
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
     
     private func initializeCells() {
