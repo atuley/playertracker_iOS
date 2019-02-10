@@ -1,6 +1,6 @@
 import UIKit
 
-class MainTableViewController: BaseTableViewController {
+class SearchTableViewController: BaseTableViewController {
     private var searchController: UISearchController!
     private var resultsTableViewController: ResultsTableViewController!
     
@@ -61,7 +61,7 @@ class MainTableViewController: BaseTableViewController {
     }
 }
 
-extension MainTableViewController {
+extension SearchTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count
     }
@@ -81,13 +81,13 @@ extension MainTableViewController {
     
 }
 
-extension MainTableViewController: UISearchBarDelegate {
+extension SearchTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
 }
 
-extension MainTableViewController: UISearchResultsUpdating {
+extension SearchTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         var filteredResults = players
         

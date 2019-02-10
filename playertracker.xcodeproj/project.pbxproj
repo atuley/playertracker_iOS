@@ -17,7 +17,7 @@
 		197A87C22207A23400938781 /* playertrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197A87C12207A23400938781 /* playertrackerTests.swift */; };
 		1994EE09220CD83A0067F77A /* PlayerSearchResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994EE08220CD83A0067F77A /* PlayerSearchResultService.swift */; };
 		199868B3220E95E4008DECA9 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 199868B2220E95BB008DECA9 /* RobotoCondensed-Regular.ttf */; };
-		19D8733F220922400090E80E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D8733E220922400090E80E /* MainTableViewController.swift */; };
+		19D8733F220922400090E80E /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D8733E220922400090E80E /* SearchTableViewController.swift */; };
 		19D873412209233F0090E80E /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D873402209233F0090E80E /* ResultsTableViewController.swift */; };
 		19E9F3E5220A7D6200989CE7 /* PlayerSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9F3E4220A7D6200989CE7 /* PlayerSearchResult.swift */; };
 		19E9F3E7220A7DC600989CE7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E9F3E6220A7DC600989CE7 /* Player.swift */; };
@@ -51,7 +51,7 @@
 		197A87C32207A23400938781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1994EE08220CD83A0067F77A /* PlayerSearchResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchResultService.swift; sourceTree = "<group>"; };
 		199868B2220E95BB008DECA9 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "../../../../Downloads/Roboto_Condensed 2/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
-		19D8733E220922400090E80E /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		19D8733E220922400090E80E /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		19D873402209233F0090E80E /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		19E9F3E4220A7D6200989CE7 /* PlayerSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchResult.swift; sourceTree = "<group>"; };
 		19E9F3E6220A7DC600989CE7 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				197A87AE2207A23300938781 /* BaseTableViewController.swift */,
-				19D8733E220922400090E80E /* MainTableViewController.swift */,
+				19D8733E220922400090E80E /* SearchTableViewController.swift */,
 				19D873402209233F0090E80E /* ResultsTableViewController.swift */,
 			);
 			path = Search;
@@ -312,7 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19D8733F220922400090E80E /* MainTableViewController.swift in Sources */,
+				19D8733F220922400090E80E /* SearchTableViewController.swift in Sources */,
 				19FC1731220A165C00764AAA /* SearchCell.swift in Sources */,
 				19FC1734220A3DB800764AAA /* Utilities.swift in Sources */,
 				1994EE09220CD83A0067F77A /* PlayerSearchResultService.swift in Sources */,
