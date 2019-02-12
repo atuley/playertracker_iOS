@@ -13,7 +13,7 @@
         <scene sceneID="2Vs-YS-shP">
             <objects>
                 <navigationController id="noH-vt-bOC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="search" id="xa7-ZI-I8b"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search_25" id="xa7-ZI-I8b"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="PH3-8K-nAU">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -57,7 +57,7 @@
                             <outlet property="delegate" destination="c10-7V-TcV" id="vfK-wS-YKz"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Search" image="search" id="AY3-L3-4f2"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search_25" id="AY3-L3-4f2"/>
                     <navigationItem key="navigationItem" title="Placeholder" largeTitleDisplayMode="always" id="Kl9-7H-T2f"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzM-14-cLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -66,6 +66,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="search" width="22.5" height="22.5"/>
+        <image name="search_25" width="75" height="75"/>
     </resources>
 </document>
