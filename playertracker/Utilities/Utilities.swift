@@ -6,7 +6,7 @@ class Utilities {
         if let imageData = try? Data(contentsOf: newUrl) {
             return UIImage(data: imageData)!
         }
-        return UIImage()
+        return UIImage(named: "placeholder")!
     }
     
     static func useHttps(url: URL) -> URL {
