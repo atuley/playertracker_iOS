@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 struct CellIdentifiers {
     static let searchCell = "SearchCell"
@@ -17,5 +18,10 @@ struct XibHeights {
 }
 
 struct Colors {
+    static let primaryBlue = Utilities.convertHexToColor(hex: "3375B1")
     static let primaryGrey = Utilities.convertHexToColor(hex: "#2D2D2D")
+}
+
+struct Fonts {
+    static let robotoCondensed = "Roboto Condensed"
 }

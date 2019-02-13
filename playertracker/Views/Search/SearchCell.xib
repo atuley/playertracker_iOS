@@ -72,12 +72,22 @@
                             <constraint firstAttribute="width" constant="228" id="4N6-eV-a9g"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7b-hR-JTB" customClass="FollowButton" customModule="playertracker" customModuleProvider="target">
+                        <rect key="frame" x="353" y="34.5" width="75" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="Hg5-4f-6hr"/>
+                            <constraint firstAttribute="height" constant="30" id="RIv-Nz-HrB"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="8Bx-ha-fG3" firstAttribute="centerY" secondItem="mIJ-Tm-diE" secondAttribute="centerY" id="GAe-rS-bA3"/>
                     <constraint firstAttribute="trailing" secondItem="8Bx-ha-fG3" secondAttribute="trailing" constant="-75" id="Ja1-E8-7zU"/>
+                    <constraint firstItem="x7b-hR-JTB" firstAttribute="centerY" secondItem="8Bx-ha-fG3" secondAttribute="centerY" id="Lic-qI-WeR"/>
                     <constraint firstItem="8Bx-ha-fG3" firstAttribute="top" secondItem="Gkl-Gm-Rr8" secondAttribute="topMargin" constant="-38" id="O7o-Sq-fxg"/>
                     <constraint firstItem="3pO-uR-AaU" firstAttribute="top" secondItem="Gkl-Gm-Rr8" secondAttribute="top" constant="25" id="OIO-Qr-Bsf"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="x7b-hR-JTB" secondAttribute="trailing" constant="10" id="SnH-dv-S4a"/>
                     <constraint firstItem="Qqb-C8-lJ0" firstAttribute="top" secondItem="3pO-uR-AaU" secondAttribute="bottom" constant="-11" id="VQu-gp-zZj"/>
                     <constraint firstAttribute="bottomMargin" secondItem="mIJ-Tm-diE" secondAttribute="bottom" constant="4" id="YcJ-dG-IwQ"/>
                     <constraint firstItem="mIJ-Tm-diE" firstAttribute="top" secondItem="Gkl-Gm-Rr8" secondAttribute="topMargin" constant="3" id="b9o-Ef-Gri"/>
@@ -100,7 +110,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="GSW" width="800" height="600"/>
+        <image name="GSW" width="625" height="625"/>
         <image name="steph" width="260" height="190"/>
     </resources>
 </document>

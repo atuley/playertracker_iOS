@@ -1,21 +1,24 @@
-//
-//  FollowButton.swift
-//  playertracker
-//
-//  Created by Alex Tuley on 2/12/19.
-//  Copyright © 2019 Alex Tuley. All rights reserved.
-//
-
 import UIKit
 
 class FollowButton: UIButton {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupButton()
     }
-    */
 
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupButton()
+    }
+    
+    private func setupButton() {
+        setTitle("Follow", for: .normal)
+        setTitleColor(UIColor.white, for: .normal)
+        titleLabel?.textAlignment = .center
+        backgroundColor = Colors.primaryBlue
+        titleLabel?.font = UIFont(name: Fonts.robotoCondensed, size: 16)
+        layer.cornerRadius = frame.size.height/2
+    }
 }
