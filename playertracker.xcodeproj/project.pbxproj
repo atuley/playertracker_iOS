@@ -15,6 +15,7 @@
 		197A87B42207A23400938781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 197A87B32207A23400938781 /* Assets.xcassets */; };
 		197A87B72207A23400938781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197A87B52207A23400938781 /* LaunchScreen.storyboard */; };
 		197A87C22207A23400938781 /* playertrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197A87C12207A23400938781 /* playertrackerTests.swift */; };
+		197B016A22139ED200374BCD /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197B016922139ED200374BCD /* FollowButton.swift */; };
 		1994EE09220CD83A0067F77A /* PlayerSearchResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994EE08220CD83A0067F77A /* PlayerSearchResultService.swift */; };
 		199868B3220E95E4008DECA9 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 199868B2220E95BB008DECA9 /* RobotoCondensed-Regular.ttf */; };
 		19D8733F220922400090E80E /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D8733E220922400090E80E /* SearchTableViewController.swift */; };
@@ -49,6 +50,7 @@
 		197A87BD2207A23400938781 /* playertrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = playertrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		197A87C12207A23400938781 /* playertrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playertrackerTests.swift; sourceTree = "<group>"; };
 		197A87C32207A23400938781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		197B016922139ED200374BCD /* FollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
 		1994EE08220CD83A0067F77A /* PlayerSearchResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchResultService.swift; sourceTree = "<group>"; };
 		199868B2220E95BB008DECA9 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "../../../../Downloads/Roboto_Condensed 2/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		19D8733E220922400090E80E /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -113,10 +115,8 @@
 				19D873382208C9930090E80E /* Controllers */,
 				1994EE06220CD7E00067F77A /* Services */,
 				190AAC5922093F5100A4784D /* Utilities */,
-				197A87AC2207A23300938781 /* AppDelegate.swift */,
 				199868B1220E9588008DECA9 /* fonts */,
-				197A87B32207A23400938781 /* Assets.xcassets */,
-				197A87B82207A23400938781 /* Info.plist */,
+				197B016822139E5B00374BCD /* Supporting Files */,
 			);
 			path = playertracker;
 			sourceTree = "<group>";
@@ -128,6 +128,18 @@
 				197A87C32207A23400938781 /* Info.plist */,
 			);
 			path = playertrackerTests;
+			sourceTree = "<group>";
+		};
+		197B016822139E5B00374BCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				197A87B02207A23300938781 /* Main.storyboard */,
+				197A87B52207A23400938781 /* LaunchScreen.storyboard */,
+				197A87AC2207A23300938781 /* AppDelegate.swift */,
+				197A87B32207A23400938781 /* Assets.xcassets */,
+				197A87B82207A23400938781 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		1994EE06220CD7E00067F77A /* Services */ = {
@@ -166,8 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				19FC1732220A188100764AAA /* Search */,
-				197A87B52207A23400938781 /* LaunchScreen.storyboard */,
-				197A87B02207A23300938781 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +213,7 @@
 		19FC1732220A188100764AAA /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				197B016922139ED200374BCD /* FollowButton.swift */,
 				19FC1730220A165C00764AAA /* SearchCell.swift */,
 				190AAC552209368F00A4784D /* SearchCell.xib */,
 			);
@@ -320,6 +331,7 @@
 				19E9F3E9220A7ED300989CE7 /* PlayerImages.swift in Sources */,
 				197A87AD2207A23300938781 /* AppDelegate.swift in Sources */,
 				19E9F3E5220A7D6200989CE7 /* PlayerSearchResult.swift in Sources */,
+				197B016A22139ED200374BCD /* FollowButton.swift in Sources */,
 				19D873412209233F0090E80E /* ResultsTableViewController.swift in Sources */,
 				19E9F3E7220A7DC600989CE7 /* Player.swift in Sources */,
 				190AAC5B22093F7700A4784D /* Constants.swift in Sources */,
