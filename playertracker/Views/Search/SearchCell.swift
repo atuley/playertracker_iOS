@@ -9,10 +9,10 @@ class SearchCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
-    func configure(player: Player) {
+    func configure(player: Player, viewWidth: CGFloat) {
+        setupNameConstraints(viewWidth: viewWidth)
         name.text = "\(player.firstName!.uppercased()) \(player.lastName!.uppercased())"
         name.textColor = UIColor.white
         info.text = "#\(player.number!) | \(player.position!)"
@@ -25,5 +25,19 @@ class SearchCell: UITableViewCell {
         
         smallTeamLogo.image = UIImage(named: player.tricode!)
         largeTeamLogo.image = UIImage(named: player.tricode!)
+    }
+    
+    private func setupNameConstraints(viewWidth: CGFloat) {
+        var widthConstraint: CGFloat = 0
+        
+        if(viewWidth == ViewWidths.iphone5) {
+            widthConstraint = 75.0
+        } else if(viewWidth >= ViewWidths.iphone6 && viewWidth < ViewWidths.ipadAir) {
+            widthConstraint = 100.0
+        } else {
+            widthConstraint = 200.0
+        }
+        
+        name.addConstraint(NSLayoutConstraint(item: name, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: widthConstraint))
     }
 }

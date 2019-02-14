@@ -29,3 +29,9 @@ struct Fonts {
 struct ButtonTitles {
     static let follow = "Follow"
 }
+
+struct ViewWidths {
+    static let iphone5 = CGFloat(bitPattern: 320)
+    static let iphone6 = CGFloat(bitPattern: 375)
+    static let ipadAir = CGFloat(bitPattern: 768)
+}
