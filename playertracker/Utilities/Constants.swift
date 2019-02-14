@@ -31,7 +31,7 @@ struct ButtonTitles {
 }
 
 struct ViewWidths {
-    static let iphone5 = CGFloat(bitPattern: 320)
-    static let iphone6 = CGFloat(bitPattern: 375)
-    static let ipadAir = CGFloat(bitPattern: 768)
+    static let iphone5 = CGFloat(integerLiteral: 320)
+    static let iphone6 = CGFloat(integerLiteral: 375)
+    static let ipadAir = CGFloat(integerLiteral: 768)
 }
