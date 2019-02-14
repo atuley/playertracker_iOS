@@ -25,3 +25,7 @@ struct Colors {
 struct Fonts {
     static let robotoCondensed = "Roboto Condensed"
 }
+
+struct ButtonTitles {
+    static let follow = "Follow"
+}

@@ -14,7 +14,7 @@ class FollowButton: UIButton {
     }
     
     private func setupButton() {
-        setTitle("Follow", for: .normal)
+        setTitle(ButtonTitles.follow, for: .normal)
         setTitleColor(UIColor.white, for: .normal)
         titleLabel?.textAlignment = .center
         backgroundColor = Colors.primaryBlue
