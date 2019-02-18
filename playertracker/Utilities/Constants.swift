@@ -19,7 +19,8 @@ struct XibHeights {
 
 struct Colors {
     static let primaryBlue = Utilities.convertHexToColor(hex: "3375B1")
-    static let primaryGrey = Utilities.convertHexToColor(hex: "#2D2D2D")
+    static let secondaryBlue = Utilities.convertHexToColor(hex: "245582")
+    static let primaryGrey = Utilities.convertHexToColor(hex: "2D2D2D")
 }
 
 struct Fonts {

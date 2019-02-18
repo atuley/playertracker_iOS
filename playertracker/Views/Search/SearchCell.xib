@@ -72,12 +72,11 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7b-hR-JTB" customClass="FollowButton" customModule="playertracker" customModuleProvider="target">
-                        <rect key="frame" x="353" y="34.5" width="75" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="75" id="Hg5-4f-6hr"/>
-                            <constraint firstAttribute="height" constant="30" id="RIv-Nz-HrB"/>
-                        </constraints>
+                        <rect key="frame" x="382" y="34.5" width="46" height="30"/>
                         <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="follow:" destination="0DL-HR-8ur" eventType="touchUpInside" id="xNK-cl-hCv"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
