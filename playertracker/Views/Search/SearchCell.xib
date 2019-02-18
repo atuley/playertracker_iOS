@@ -98,6 +98,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="followButton" destination="x7b-hR-JTB" id="EMZ-DI-Yct"/>
                 <outlet property="info" destination="Qqb-C8-lJ0" id="A9R-0l-Eww"/>
                 <outlet property="largeTeamLogo" destination="8Bx-ha-fG3" id="6or-Rq-r7n"/>
                 <outlet property="name" destination="3pO-uR-AaU" id="BZQ-XU-KAE"/>

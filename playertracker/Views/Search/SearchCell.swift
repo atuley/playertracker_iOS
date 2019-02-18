@@ -6,12 +6,35 @@ class SearchCell: UITableViewCell {
     @IBOutlet weak var playerImage: UIImageView!
     @IBOutlet weak var smallTeamLogo: UIImageView!
     @IBOutlet weak var largeTeamLogo: UIImageView!
+    @IBOutlet weak var followButton: FollowButton!
+    private var player: Player!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    @IBAction func follow(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        let playersWatching = defaults.array(forKey: "playersWatching") as! [String]
+        var newPlayersWatching: [String] = []
+
+        if(playersWatching.contains(player.id!)) {
+            newPlayersWatching = playersWatching
+        } else {
+            newPlayersWatching = playersWatching + [player.id!]
+        }
+        
+        defaults.set(newPlayersWatching, forKey: "playersWatching")
+    }
+    
     func configure(player: Player, viewWidth: CGFloat) {
+        self.player = player
+        let defaults = UserDefaults.standard
+        let playersWatching = defaults.array(forKey: "playersWatching") as! [String]
+        if(playersWatching.contains(player.id!)) {
+            followButton.setTitle("Unfollow", for: .normal)
+        }
+        
         setupNameConstraints(viewWidth: viewWidth)
         name.text = "\(player.firstName!.uppercased()) \(player.lastName!.uppercased())"
         name.textColor = UIColor.white
