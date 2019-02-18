@@ -21,6 +21,7 @@ struct Colors {
     static let primaryBlue = Utilities.convertHexToColor(hex: "3375B1")
     static let secondaryBlue = Utilities.convertHexToColor(hex: "245582")
     static let primaryGrey = Utilities.convertHexToColor(hex: "2D2D2D")
+    static let primaryRed = Utilities.convertHexToColor(hex: "ff4242")
 }
 
 struct Fonts {
@@ -29,6 +30,7 @@ struct Fonts {
 
 struct ButtonTitles {
     static let follow = "Follow"
+    static let unfollow = "Unfollow"
 }
 
 struct ViewWidths {

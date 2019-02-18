@@ -31,4 +31,12 @@ class FollowButton: UIButton {
         titleLabel?.font = UIFont(name: Fonts.robotoCondensed, size: 16)
         layer.cornerRadius = frame.size.height/2
     }
+    
+    func follow() {
+        setTitle(ButtonTitles.unfollow, for: .normal)
+    }
+    
+    func unfollow() {
+        setTitle(ButtonTitles.follow, for: .normal)
+    }
 }

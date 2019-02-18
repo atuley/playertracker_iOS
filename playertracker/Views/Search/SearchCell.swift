@@ -19,9 +19,13 @@ class SearchCell: UITableViewCell {
         var newPlayersWatching: [String] = []
 
         if(playersWatching.contains(player.id!)) {
-            newPlayersWatching = playersWatching
+            newPlayersWatching = delete(players: playersWatching, element: player.id!)
+            followButton.unfollow()
+            print(newPlayersWatching)
         } else {
             newPlayersWatching = playersWatching + [player.id!]
+            followButton.follow()
+            print(newPlayersWatching)
         }
         
         defaults.set(newPlayersWatching, forKey: "playersWatching")
@@ -32,7 +36,7 @@ class SearchCell: UITableViewCell {
         let defaults = UserDefaults.standard
         let playersWatching = defaults.array(forKey: "playersWatching") as! [String]
         if(playersWatching.contains(player.id!)) {
-            followButton.setTitle("Unfollow", for: .normal)
+            followButton.setTitle(ButtonTitles.unfollow, for: .normal)
         }
         
         setupNameConstraints(viewWidth: viewWidth)
@@ -62,5 +66,9 @@ class SearchCell: UITableViewCell {
         }
         
         name.addConstraint(NSLayoutConstraint(item: name, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: widthConstraint))
+    }
+    
+    private func delete(players: [String], element: String) -> [String] {
+        return players.filter() { $0 != element }
     }
 }
