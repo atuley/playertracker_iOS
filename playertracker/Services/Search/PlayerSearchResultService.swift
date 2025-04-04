@@ -13,7 +13,7 @@ class PlayerSearchService: NSObject, SearchService, URLSessionDelegate {
     
     func getPlayerSearchResults(completionHandler: @escaping (PlayerSearchResult?, Error?) -> Void) {
         let searchUrl = "http://127.0.0.1:4000/api/players"
-        
+        print("hello world")
         guard let request = URL(string: searchUrl) else { return }
         
         let dataTask = session.dataTask(with: request) {

@@ -3,6 +3,7 @@ import UIKit
 class SearchTableViewController: BaseTableViewController {
     private var searchController: UISearchController!
     private var resultsTableViewController: ResultsTableViewController!
+    private let searchService: SearchService = MockPlayerSearchService()
     
     var players: [Player] = []
     
@@ -48,7 +49,7 @@ class SearchTableViewController: BaseTableViewController {
     }
     
     private func fetchPlayers() {
-        PlayerSearchService().getPlayerSearchResults() {
+        searchService.getPlayerSearchResults() {
             (playerSearchResult, error) in
             if error != nil {
                 print("Error searching : \(String(describing: error))")
@@ -67,13 +68,25 @@ extension SearchTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let player = players[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.searchCell, for: indexPath) as? SearchCell   {
-            cell.layer.insertSublayer(Utilities.createImageGradient(player: player), at: 0)
-            cell.selectionStyle = UITableViewCell.SelectionStyle.none;
+            // Remove any existing gradient layers first
+            cell.layer.sublayers?.forEach { layer in
+                if layer is CAGradientLayer {
+                    layer.removeFromSuperlayer()
+                }
+            }
+            
+            // Configure the cell first so the logo is set up
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
             cell.configure(player: player, viewWidth: self.view.bounds.width)
+            
+            // Add the gradient layer below everything else
+            let gradient = Utilities.createImageGradient(player: player)
+            gradient.frame = CGRect(x: 0, y: 0, width: cell.bounds.width, height: cell.bounds.height)
+            cell.layer.insertSublayer(gradient, at: 0)
+            
             return cell
         } else {
             return UITableViewCell()

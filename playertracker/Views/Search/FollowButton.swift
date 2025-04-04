@@ -28,7 +28,7 @@ class FollowButton: UIButton {
         setTitleColor(UIColor.white, for: .normal)
         titleLabel?.textAlignment = .center
         backgroundColor = Colors.primaryBlue
-        titleLabel?.font = UIFont(name: Fonts.robotoCondensed, size: 16)
+//        titleLabel?.font = UIFont(name: Fonts.robotoCondensed, size: 16)
         layer.cornerRadius = frame.size.height/2
     }
     

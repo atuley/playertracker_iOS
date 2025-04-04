@@ -14,17 +14,29 @@ class Utilities {
     }
     
     static func createImageGradient(player: Player) -> CAGradientLayer {
-        let screenWidth  = UIScreen.main.fixedCoordinateSpace.bounds.width
-        
         let gradient = CAGradientLayer()
-        gradient.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 400)
+        
+        // Set frame to match the cell size
+        let screenWidth = UIScreen.main.bounds.width
+        gradient.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 100) // Match cell height
+        
+        // Create a horizontal gradient
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
-        gradient.endPoint = CGPoint(x: 5.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
         
+        // Convert team color and create gradient colors
+        let teamColor = convertHexToColor(hex: player.teamColor ?? "#000000")
+        
+        // Create a darker gradient that will be more visible
         let startColor = Colors.primaryGrey
-        let endColor = convertHexToColor(hex: player.teamColor!)
+        let midColor = teamColor.withAlphaComponent(1.0)
         
-        gradient.colors = [startColor.cgColor, endColor.cgColor]
+        // Set gradient colors and locations
+        gradient.colors = [
+            startColor.cgColor,
+            midColor.cgColor
+        ]
+        gradient.locations = [0.0, 1.0]
         
         return gradient
     }

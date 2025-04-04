@@ -25,6 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
 
         UITextField.appearance().keyboardAppearance = UIKeyboardAppearance.dark;
+        
+        // Initialize UserDefaults for playersWatching if not already set
+        if UserDefaults.standard.array(forKey: "playersWatching") == nil {
+            UserDefaults.standard.set([], forKey: "playersWatching")
+        }
+        
         return true
     }
 

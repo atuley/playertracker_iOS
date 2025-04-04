@@ -11,6 +11,18 @@ class SearchCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundColor = .clear
+        contentView.backgroundColor = .clear
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        // Remove any existing gradient layers
+        layer.sublayers?.forEach { layer in
+            if layer is CAGradientLayer {
+                layer.removeFromSuperlayer()
+            }
+        }
     }
     
     @IBAction func follow(_ sender: Any) {
@@ -52,6 +64,9 @@ class SearchCell: UITableViewCell {
         
         smallTeamLogo.image = UIImage(named: player.tricode!)
         largeTeamLogo.image = UIImage(named: player.tricode!)
+        
+        // Ensure large team logo stays on top
+//        contentView.bringSubviewToFront(largeTeamLogo)
     }
     
     private func setupNameConstraints(viewWidth: CGFloat) {
